@@ -13,8 +13,7 @@ namespace loja_carro.Resources.Model
         public string Modelo { get; set; }
         public float Preco { get; set; }
 
-        public Property(string marca,
-            string modelo, float preco)
+        public Property(string marca,string modelo, float preco)
         {
             Marca = marca;
             Modelo = modelo;

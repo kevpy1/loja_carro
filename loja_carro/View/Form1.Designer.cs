@@ -51,7 +51,7 @@
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txbobject = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cbxMarca = new System.Windows.Forms.Label();
             this.txbcar4 = new System.Windows.Forms.PictureBox();
@@ -307,14 +307,15 @@
             this.textBox2.TabIndex = 50;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button2
+            // txbobject
             // 
-            this.button2.Location = new System.Drawing.Point(269, 664);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "filtrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txbobject.Location = new System.Drawing.Point(269, 664);
+            this.txbobject.Name = "txbobject";
+            this.txbobject.Size = new System.Drawing.Size(75, 23);
+            this.txbobject.TabIndex = 51;
+            this.txbobject.Text = "filtrar";
+            this.txbobject.UseVisualStyleBackColor = true;
+            this.txbobject.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -453,7 +454,7 @@
             this.Controls.Add(this.txbcar2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txbobject);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txbprec4);
             this.Controls.Add(this.checkBox15);
@@ -515,7 +516,7 @@
         private System.Windows.Forms.CheckBox checkBox15;
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button txbobject;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox txbcar2;

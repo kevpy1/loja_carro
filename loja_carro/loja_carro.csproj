@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Resources\controller\Class1.cs" />
     <Compile Include="Resources\Model\Property.cs" />
+    <Compile Include="Resources\Model\PropertyDAO.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
