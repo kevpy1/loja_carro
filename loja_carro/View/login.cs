@@ -1,4 +1,6 @@
-﻿using System;
+﻿using loja_carro.Model;
+using loja_carro.Resources.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -80,6 +82,20 @@ namespace loja_carro.View
             {
                 MessageBox.Show("Usuário ou Senha está incorreto");
             }
+        }
+
+        private void txtcriarlog_Click(object sender, EventArgs e)
+        {
+            string usuariocad = txbusuario.Text;
+            string senha = txbsenha.Text;
+
+
+
+            Usuario usuario = new Usuario(usuariocad, senha);
+
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+            usuarioDAO.insert(usuario);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using loja_carro.Controller;
+using loja_carro.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -8,26 +9,26 @@ using System.Threading.Tasks;
 
 namespace loja_carro.Resources.Model
 {
-    internal class PropertyDAO
+    internal class UsuarioDAO
     {
         private Connection connect { get; set; }
         private SqlCommand Command { get; set; }
 
-        public PropertyDAO()
+        public UsuarioDAO()
         {
             connect = new Connection();
             Command = new SqlCommand();
 
         }
-        public void insert(Property prop)
+        public void insert(Usuario prop)
         {
             Command.Connection = connect.ReturnConnection();
-            Command.CommandText = @"INSER INTO Usuario VALUES 
-         (@Marca,@Modelo,  @Preco)";
+            Command.CommandText = @"INSERT INTO USUARIO VALUES 
+         (@USUARIO, @SENHA)";
 
-            Command.Parameters.AddWithValue("@Marca", prop.Marca);
-            Command.Parameters.AddWithValue("Modelo", prop.Modelo);
-            Command.Parameters.AddWithValue("Preco", prop.Preco);
+            Command.Parameters.AddWithValue("@USUARIO", prop.Usuarionome);
+            Command.Parameters.AddWithValue("@SENHA", prop.Senha);
+         
 
             try
 

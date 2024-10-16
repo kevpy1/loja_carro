@@ -10,7 +10,7 @@ namespace loja_carro.Controller
     internal class Connection
     {
         private SqlConnection con;
-        private string Database = "PRCJ3022358LOJADECARRO";
+        private string Database = "PR2CJ3022358LOJADECARRO";
         private string Server = "sqlexpress";
         private string Username = "aluno";
         private string Password = "aluno";

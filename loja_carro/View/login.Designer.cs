@@ -34,11 +34,12 @@
             this.user = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.usuario = new System.Windows.Forms.Label();
-            this.senha = new System.Windows.Forms.Label();
-            this.txbsenha = new System.Windows.Forms.TextBox();
-            this.txbusuario = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txbusuario = new System.Windows.Forms.TextBox();
+            this.txbsenha = new System.Windows.Forms.TextBox();
+            this.senha = new System.Windows.Forms.Label();
+            this.usuario = new System.Windows.Forms.Label();
+            this.txtcriarlog = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,6 +94,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtcriarlog);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txbusuario);
             this.panel1.Controls.Add(this.txbsenha);
@@ -106,16 +108,31 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // usuario
+            // button1
             // 
-            this.usuario.AutoSize = true;
-            this.usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuario.Location = new System.Drawing.Point(152, 22);
-            this.usuario.Name = "usuario";
-            this.usuario.Size = new System.Drawing.Size(96, 29);
-            this.usuario.TabIndex = 3;
-            this.usuario.Text = "Usuario";
-            this.usuario.Click += new System.EventHandler(this.label1_Click);
+            this.button1.Location = new System.Drawing.Point(301, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txbusuario
+            // 
+            this.txbusuario.Location = new System.Drawing.Point(157, 80);
+            this.txbusuario.Name = "txbusuario";
+            this.txbusuario.Size = new System.Drawing.Size(100, 20);
+            this.txbusuario.TabIndex = 6;
+            this.txbusuario.TextChanged += new System.EventHandler(this.texsenha1_TextChanged);
+            // 
+            // txbsenha
+            // 
+            this.txbsenha.Location = new System.Drawing.Point(157, 189);
+            this.txbsenha.Name = "txbsenha";
+            this.txbsenha.Size = new System.Drawing.Size(116, 20);
+            this.txbsenha.TabIndex = 5;
+            this.txbsenha.TextChanged += new System.EventHandler(this.textSenh_TextChanged);
             // 
             // senha
             // 
@@ -128,31 +145,26 @@
             this.senha.Text = "Senha";
             this.senha.Click += new System.EventHandler(this.senha_Click);
             // 
-            // txbsenha
+            // usuario
             // 
-            this.txbsenha.Location = new System.Drawing.Point(157, 189);
-            this.txbsenha.Name = "txbsenha";
-            this.txbsenha.Size = new System.Drawing.Size(116, 20);
-            this.txbsenha.TabIndex = 5;
-            this.txbsenha.TextChanged += new System.EventHandler(this.textSenh_TextChanged);
+            this.usuario.AutoSize = true;
+            this.usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuario.Location = new System.Drawing.Point(152, 22);
+            this.usuario.Name = "usuario";
+            this.usuario.Size = new System.Drawing.Size(96, 29);
+            this.usuario.TabIndex = 3;
+            this.usuario.Text = "Usuario";
+            this.usuario.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txbusuario
+            // txtcriarlog
             // 
-            this.txbusuario.Location = new System.Drawing.Point(157, 80);
-            this.txbusuario.Name = "txbusuario";
-            this.txbusuario.Size = new System.Drawing.Size(100, 20);
-            this.txbusuario.TabIndex = 6;
-            this.txbusuario.TextChanged += new System.EventHandler(this.texsenha1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(301, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtcriarlog.Location = new System.Drawing.Point(206, 213);
+            this.txtcriarlog.Name = "txtcriarlog";
+            this.txtcriarlog.Size = new System.Drawing.Size(75, 23);
+            this.txtcriarlog.TabIndex = 9;
+            this.txtcriarlog.Text = "criar login";
+            this.txtcriarlog.UseVisualStyleBackColor = true;
+            this.txtcriarlog.Click += new System.EventHandler(this.txtcriarlog_Click);
             // 
             // login
             // 
@@ -187,5 +199,6 @@
         private System.Windows.Forms.TextBox txbusuario;
         private System.Windows.Forms.TextBox txbsenha;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button txtcriarlog;
     }
 }

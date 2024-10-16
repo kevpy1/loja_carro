@@ -105,7 +105,7 @@ namespace loja_carro
         private void button2_Click(object sender, EventArgs e)
         {
             string marca = cbxMarca.Text;
-            string obje =txb
+           
 
         }
     }

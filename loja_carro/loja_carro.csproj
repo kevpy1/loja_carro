@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Resources\controller\Class1.cs" />
-    <Compile Include="Resources\Model\Property.cs" />
-    <Compile Include="Resources\Model\PropertyDAO.cs" />
+    <Compile Include="controller\Class1.cs" />
+    <Compile Include="Model\UsuarioDAO.cs" />
+    <Compile Include="Model\Usuario.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
