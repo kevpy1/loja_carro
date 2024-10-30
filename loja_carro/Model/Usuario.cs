@@ -1,4 +1,5 @@
-﻿using System;
+﻿using loja_carro.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,20 @@ namespace loja_carro.Model
         public string Usuarionome { get; set; }
         public string Senha { get; set; }
         
-        public Usuario( string usuario, string senha)
+        public Usuario( int codusuario , string usuario, string senha)
         {
-            
-            Usuarionome = usuario;
-            Senha = senha;
+            Codusuario = codusuario;
+           
 
         }
+    
+
+      public Usuario(string usuario, string senha)
+{
+    Codusuario = Codusuario;
+    Usuarionome = usuario;
+    Senha = senha;
+
+}
     }
 }       
