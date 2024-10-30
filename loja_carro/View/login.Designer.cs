@@ -34,12 +34,12 @@
             this.user = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtcriarlog = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txbusuario = new System.Windows.Forms.TextBox();
             this.txbsenha = new System.Windows.Forms.TextBox();
             this.senha = new System.Windows.Forms.Label();
             this.usuario = new System.Windows.Forms.Label();
-            this.txtcriarlog = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,6 +108,16 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtcriarlog
+            // 
+            this.txtcriarlog.Location = new System.Drawing.Point(206, 213);
+            this.txtcriarlog.Name = "txtcriarlog";
+            this.txtcriarlog.Size = new System.Drawing.Size(75, 23);
+            this.txtcriarlog.TabIndex = 9;
+            this.txtcriarlog.Text = "criar login";
+            this.txtcriarlog.UseVisualStyleBackColor = true;
+            this.txtcriarlog.Click += new System.EventHandler(this.txtcriarlog_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(301, 213);
@@ -156,16 +166,6 @@
             this.usuario.Text = "Usuario";
             this.usuario.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtcriarlog
-            // 
-            this.txtcriarlog.Location = new System.Drawing.Point(206, 213);
-            this.txtcriarlog.Name = "txtcriarlog";
-            this.txtcriarlog.Size = new System.Drawing.Size(75, 23);
-            this.txtcriarlog.TabIndex = 9;
-            this.txtcriarlog.Text = "criar login";
-            this.txtcriarlog.UseVisualStyleBackColor = true;
-            this.txtcriarlog.Click += new System.EventHandler(this.txtcriarlog_Click);
-            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +176,7 @@
             this.Controls.Add(this.user);
             this.Controls.Add(this.pictureBox2);
             this.Name = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -108,5 +108,10 @@ namespace loja_carro
            
 
         }
+
+        private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

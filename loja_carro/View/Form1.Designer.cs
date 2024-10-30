@@ -288,6 +288,7 @@
             this.checkBox15.TabIndex = 48;
             this.checkBox15.Text = "checkBox15";
             this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
             // checkBox16
             // 

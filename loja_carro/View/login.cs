@@ -97,5 +97,10 @@ namespace loja_carro.View
 
             usuarioDAO.insert(usuario);
         }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
