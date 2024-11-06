@@ -40,6 +40,7 @@
             this.txbsenha = new System.Windows.Forms.TextBox();
             this.senha = new System.Windows.Forms.Label();
             this.usuario = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -201,5 +202,6 @@
         private System.Windows.Forms.TextBox txbsenha;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button txtcriarlog;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

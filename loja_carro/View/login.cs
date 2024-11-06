@@ -85,7 +85,7 @@ namespace loja_carro.View
         }
 
         private void txtcriarlog_Click(object sender, EventArgs e)
-        {
+        { 
             string usuariocad = txbusuario.Text;
             string senha = txbsenha.Text;
 
@@ -96,6 +96,11 @@ namespace loja_carro.View
             UsuarioDAO usuarioDAO = new UsuarioDAO();
 
             usuarioDAO.insert(usuario);
+            
+            txbusuario.Clear();
+            txbusuario.Clear();
+
+            MessageBox.Show("Usuario cadastrado ");
         }
 
         private void login_Load(object sender, EventArgs e)

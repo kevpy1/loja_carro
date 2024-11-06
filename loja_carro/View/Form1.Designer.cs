@@ -284,9 +284,9 @@
             this.checkBox15.AutoSize = true;
             this.checkBox15.Location = new System.Drawing.Point(18, 664);
             this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(86, 17);
+            this.checkBox15.Size = new System.Drawing.Size(150, 17);
             this.checkBox15.TabIndex = 48;
-            this.checkBox15.Text = "checkBox15";
+            this.checkBox15.Text = "R$ 300.000 a R$ 350.000";
             this.checkBox15.UseVisualStyleBackColor = true;
             this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
@@ -295,9 +295,9 @@
             this.checkBox16.AutoSize = true;
             this.checkBox16.Location = new System.Drawing.Point(18, 687);
             this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(86, 17);
+            this.checkBox16.Size = new System.Drawing.Size(150, 17);
             this.checkBox16.TabIndex = 47;
-            this.checkBox16.Text = "checkBox16";
+            this.checkBox16.Text = "R$ 400.000 a R$ 450.000";
             this.checkBox16.UseVisualStyleBackColor = true;
             // 
             // textBox2
