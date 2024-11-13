@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\Class1.cs" />
+    <Compile Include="Model\Broker.cs" />
+    <Compile Include="Model\BrokerDAO.cs" />
     <Compile Include="Model\UsuarioDAO.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="View\Form1.cs">

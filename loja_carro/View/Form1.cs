@@ -25,7 +25,7 @@ namespace loja_carro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            txbkm1.Clear();
             txbprec3.Checked = false; 
             txbprec2.Checked = false; 
             txbprec1.Checked = false; 
@@ -39,8 +39,8 @@ namespace loja_carro
             txbNissanleaf.Checked = false;
             txbtoyot.Checked = false;
             txbprec4.Checked = false;
-            checkBox15.Checked = false;
-            checkBox16.Checked = false;
+            txbprec5.Checked = false;
+            txbprec6.Checked = false;
            
         }
 
@@ -112,6 +112,16 @@ namespace loja_carro
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

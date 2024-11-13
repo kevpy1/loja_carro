@@ -45,14 +45,14 @@
             this.txbFordMaverick = new System.Windows.Forms.CheckBox();
             this.txbNissanleaf = new System.Windows.Forms.CheckBox();
             this.txbtoyot = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnlimpsrfil = new System.Windows.Forms.Button();
+            this.txbkm1 = new System.Windows.Forms.TextBox();
             this.txbprec4 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txbobject = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txbprec5 = new System.Windows.Forms.CheckBox();
+            this.txbprec6 = new System.Windows.Forms.CheckBox();
+            this.txbkm2 = new System.Windows.Forms.TextBox();
+            this.btnfiltrar = new System.Windows.Forms.Button();
+            this.cmbmarcaescolha = new System.Windows.Forms.ComboBox();
             this.cbxMarca = new System.Windows.Forms.Label();
             this.txbcar4 = new System.Windows.Forms.PictureBox();
             this.txbar1 = new System.Windows.Forms.PictureBox();
@@ -62,6 +62,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txbObjetivo = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Modelo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.objetivo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.categoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.localização = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.marca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.txbcar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbcar3)).BeginInit();
@@ -251,23 +258,23 @@
             this.txbtoyot.Text = "Toyota Corolla Hybrid";
             this.txbtoyot.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnlimpsrfil
             // 
-            this.button1.Location = new System.Drawing.Point(170, 664);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "limpar filtro";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnlimpsrfil.Location = new System.Drawing.Point(547, 681);
+            this.btnlimpsrfil.Name = "btnlimpsrfil";
+            this.btnlimpsrfil.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpsrfil.TabIndex = 45;
+            this.btnlimpsrfil.Text = "limpar filtro";
+            this.btnlimpsrfil.UseVisualStyleBackColor = true;
+            this.btnlimpsrfil.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txbkm1
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 337);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(55, 20);
-            this.textBox1.TabIndex = 46;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txbkm1.Location = new System.Drawing.Point(190, 337);
+            this.txbkm1.Name = "txbkm1";
+            this.txbkm1.Size = new System.Drawing.Size(55, 20);
+            this.txbkm1.TabIndex = 46;
+            this.txbkm1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txbprec4
             // 
@@ -279,50 +286,50 @@
             this.txbprec4.Text = "R$ 200.000 a R$ 250.000";
             this.txbprec4.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // txbprec5
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(18, 664);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(150, 17);
-            this.checkBox15.TabIndex = 48;
-            this.checkBox15.Text = "R$ 300.000 a R$ 350.000";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
+            this.txbprec5.AutoSize = true;
+            this.txbprec5.Location = new System.Drawing.Point(18, 664);
+            this.txbprec5.Name = "txbprec5";
+            this.txbprec5.Size = new System.Drawing.Size(150, 17);
+            this.txbprec5.TabIndex = 48;
+            this.txbprec5.Text = "R$ 300.000 a R$ 350.000";
+            this.txbprec5.UseVisualStyleBackColor = true;
+            this.txbprec5.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
-            // checkBox16
+            // txbprec6
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(18, 687);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(150, 17);
-            this.checkBox16.TabIndex = 47;
-            this.checkBox16.Text = "R$ 400.000 a R$ 450.000";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.txbprec6.AutoSize = true;
+            this.txbprec6.Location = new System.Drawing.Point(18, 687);
+            this.txbprec6.Name = "txbprec6";
+            this.txbprec6.Size = new System.Drawing.Size(150, 17);
+            this.txbprec6.TabIndex = 47;
+            this.txbprec6.Text = "R$ 400.000 a R$ 450.000";
+            this.txbprec6.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txbkm2
             // 
-            this.textBox2.Location = new System.Drawing.Point(269, 337);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(55, 20);
-            this.textBox2.TabIndex = 50;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txbkm2.Location = new System.Drawing.Point(269, 337);
+            this.txbkm2.Name = "txbkm2";
+            this.txbkm2.Size = new System.Drawing.Size(55, 20);
+            this.txbkm2.TabIndex = 50;
+            this.txbkm2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // txbobject
+            // btnfiltrar
             // 
-            this.txbobject.Location = new System.Drawing.Point(269, 664);
-            this.txbobject.Name = "txbobject";
-            this.txbobject.Size = new System.Drawing.Size(75, 23);
-            this.txbobject.TabIndex = 51;
-            this.txbobject.Text = "filtrar";
-            this.txbobject.UseVisualStyleBackColor = true;
-            this.txbobject.Click += new System.EventHandler(this.button2_Click);
+            this.btnfiltrar.Location = new System.Drawing.Point(688, 681);
+            this.btnfiltrar.Name = "btnfiltrar";
+            this.btnfiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnfiltrar.TabIndex = 51;
+            this.btnfiltrar.Text = "filtrar";
+            this.btnfiltrar.UseVisualStyleBackColor = true;
+            this.btnfiltrar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // cmbmarcaescolha
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbmarcaescolha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbmarcaescolha.FormattingEnabled = true;
+            this.cmbmarcaescolha.Items.AddRange(new object[] {
             "Toyota",
             "Ford",
             "Chevrolet",
@@ -343,11 +350,11 @@
             "Volvo",
             "Mazda",
             "Renault"});
-            this.comboBox1.Location = new System.Drawing.Point(391, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 24);
-            this.comboBox1.TabIndex = 60;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbmarcaescolha.Location = new System.Drawing.Point(395, 56);
+            this.cmbmarcaescolha.Name = "cmbmarcaescolha";
+            this.cmbmarcaescolha.Size = new System.Drawing.Size(102, 24);
+            this.cmbmarcaescolha.TabIndex = 60;
+            this.cmbmarcaescolha.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // cbxMarca
             // 
@@ -363,7 +370,7 @@
             // txbcar4
             // 
             this.txbcar4.Image = global::loja_carro.Properties.Resources.carro_4;
-            this.txbcar4.Location = new System.Drawing.Point(843, 429);
+            this.txbcar4.Location = new System.Drawing.Point(688, 417);
             this.txbcar4.Name = "txbcar4";
             this.txbcar4.Size = new System.Drawing.Size(223, 185);
             this.txbcar4.TabIndex = 58;
@@ -372,16 +379,16 @@
             // txbar1
             // 
             this.txbar1.Image = global::loja_carro.Properties.Resources.carro_2;
-            this.txbar1.Location = new System.Drawing.Point(431, 450);
+            this.txbar1.Location = new System.Drawing.Point(359, 417);
             this.txbar1.Name = "txbar1";
-            this.txbar1.Size = new System.Drawing.Size(242, 185);
+            this.txbar1.Size = new System.Drawing.Size(223, 185);
             this.txbar1.TabIndex = 57;
             this.txbar1.TabStop = false;
             // 
             // txbcar3
             // 
             this.txbcar3.Image = global::loja_carro.Properties.Resources.carro_3;
-            this.txbcar3.Location = new System.Drawing.Point(843, 216);
+            this.txbcar3.Location = new System.Drawing.Point(688, 210);
             this.txbcar3.Name = "txbcar3";
             this.txbcar3.Size = new System.Drawing.Size(223, 185);
             this.txbcar3.TabIndex = 56;
@@ -390,9 +397,9 @@
             // txbcar2
             // 
             this.txbcar2.Image = global::loja_carro.Properties.Resources.carro_1__2_;
-            this.txbcar2.Location = new System.Drawing.Point(431, 216);
+            this.txbcar2.Location = new System.Drawing.Point(359, 210);
             this.txbcar2.Name = "txbcar2";
-            this.txbcar2.Size = new System.Drawing.Size(242, 179);
+            this.txbcar2.Size = new System.Drawing.Size(223, 185);
             this.txbcar2.TabIndex = 55;
             this.txbcar2.TabStop = false;
             this.txbcar2.Click += new System.EventHandler(this.txbcar2_Click);
@@ -439,15 +446,55 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(102, 24);
             this.comboBox2.TabIndex = 63;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.objetivo,
+            this.marca,
+            this.categoria,
+            this.Modelo,
+            this.localização});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(917, 294);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(528, 97);
+            this.listView1.TabIndex = 64;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            // 
+            // Modelo
+            // 
+            this.Modelo.DisplayIndex = 1;
+            this.Modelo.Text = "Modelo";
+            // 
+            // objetivo
+            // 
+            this.objetivo.DisplayIndex = 2;
+            // 
+            // localização
+            // 
+            this.localização.DisplayIndex = 4;
+            // 
+            // marca
+            // 
+            this.marca.DisplayIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1293, 735);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.txbObjetivo);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbmarcaescolha);
             this.Controls.Add(this.cbxMarca);
             this.Controls.Add(this.txbcar4);
             this.Controls.Add(this.txbar1);
@@ -455,13 +502,13 @@
             this.Controls.Add(this.txbcar2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txbobject);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnfiltrar);
+            this.Controls.Add(this.txbkm2);
             this.Controls.Add(this.txbprec4);
-            this.Controls.Add(this.checkBox15);
-            this.Controls.Add(this.checkBox16);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txbprec5);
+            this.Controls.Add(this.txbprec6);
+            this.Controls.Add(this.txbkm1);
+            this.Controls.Add(this.btnlimpsrfil);
             this.Controls.Add(this.txbToyotaCross);
             this.Controls.Add(this.txbSubarufor);
             this.Controls.Add(this.txbFordMaverick);
@@ -481,6 +528,7 @@
             this.Controls.Add(this.txbcatec);
             this.Name = "Form1";
             this.Text = "loja ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txbcar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbcar3)).EndInit();
@@ -511,23 +559,30 @@
         private System.Windows.Forms.CheckBox txbFordMaverick;
         private System.Windows.Forms.CheckBox txbNissanleaf;
         private System.Windows.Forms.CheckBox txbtoyot;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnlimpsrfil;
+        private System.Windows.Forms.TextBox txbkm1;
         private System.Windows.Forms.CheckBox txbprec4;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button txbobject;
+        private System.Windows.Forms.CheckBox txbprec5;
+        private System.Windows.Forms.CheckBox txbprec6;
+        private System.Windows.Forms.TextBox txbkm2;
+        private System.Windows.Forms.Button btnfiltrar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox txbcar2;
         private System.Windows.Forms.PictureBox txbcar3;
         private System.Windows.Forms.PictureBox txbar1;
         private System.Windows.Forms.PictureBox txbcar4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbmarcaescolha;
         private System.Windows.Forms.Label cbxMarca;
         private System.Windows.Forms.Label txbObjetivo;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader Modelo;
+        private System.Windows.Forms.ColumnHeader objetivo;
+        private System.Windows.Forms.ColumnHeader marca;
+        private System.Windows.Forms.ColumnHeader categoria;
+        private System.Windows.Forms.ColumnHeader localização;
     }
 }
 
