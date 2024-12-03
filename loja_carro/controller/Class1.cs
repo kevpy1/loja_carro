@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace loja_carro.Controller
 {
@@ -14,36 +10,28 @@ namespace loja_carro.Controller
         private string Server = "sqlexpress";
         private string Username = "aluno";
         private string Password = "aluno";
+
         public Connection()
         {
-            string stringconnection = @"Data Source  = " + Server
-            + "; initial catalog  = " + Database
-            + "; user Id =" + Username
-            + "; Password = " + Password
-            + "; encrypt = false ";
-
-            // string atringconnection = @ "Data souce=" + enviror
+            string stringconnection = @"Data Source=" + Server
+            + ";Initial Catalog=" + Database
+            + ";User ID=" + Username
+            + ";Password=" + Password
+            + ";Encrypt=False";
 
             con = new SqlConnection(stringconnection);
-            con.Open(); // abrir a conexão com o banco de dados
-
-            // tente fechar a conexão que foi aberta 
-
+            con.Open();
         }
+
         public void CloseConnection()
         {
             if (con.State == System.Data.ConnectionState.Open)
                 con.Close();
         }
-        public SqlConnection ReturnConnection()
 
+        public SqlConnection ReturnConnection()
         {
             return con;
-            
-            }
         }
     }
-      
-
-    
-
+}

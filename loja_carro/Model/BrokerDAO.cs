@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace loja_carro.Model
 {
@@ -12,18 +9,18 @@ namespace loja_carro.Model
     {
         private Connection Connect { get; set; }
         private SqlCommand Command { get; set; }
-        //Sempre o nome da classe
-        public BrokerDAO() //método construtor
+
+        public BrokerDAO()
         {
             Connect = new Connection();
             Command = new SqlCommand();
         }
+
         public bool Insert(Broker broker)
         {
             Command.Connection = Connect.ReturnConnection();
             Command.CommandText =
-            @"INSERT INTO 
-            Broker VALUES 
+            @"INSERT INTO Broker VALUES 
             (@brokerName, @brokerCode, @state, @codeArea, @telephone, @email, @password)";
 
             Command.Parameters.AddWithValue("@brokerName", broker.BrokerName);
@@ -36,7 +33,6 @@ namespace loja_carro.Model
 
             try
             {
-                //Executa query definida acima.
                 Command.ExecuteNonQuery();
             }
             catch (Exception err)
@@ -50,7 +46,6 @@ namespace loja_carro.Model
             }
             return true;
         }
-
 
         public void Update(Broker broker)
         {
@@ -110,18 +105,17 @@ namespace loja_carro.Model
                 Connect.CloseConnection();
             }
         }
+
         public List<Broker> ListAllBrokers()
         {
-
             Command.Connection = Connect.ReturnConnection();
             Command.CommandText = "SELECT * FROM Broker";
 
-            List<Broker> brokers = new List<Broker>(); //Instancio a list com o tamanho padrão.
+            List<Broker> brokers = new List<Broker>();
             try
             {
                 SqlDataReader rd = Command.ExecuteReader();
 
-                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
                 while (rd.Read())
                 {
                     Broker broker = new Broker(
@@ -132,8 +126,7 @@ namespace loja_carro.Model
                         (int)rd["CodeArea"],
                         (string)rd["Telephone"],
                         (string)rd["Email"],
-                        (string)rd["Password"]
-                        );
+                        (string)rd["Password"]);
                     brokers.Add(broker);
                 }
                 rd.Close();
@@ -141,7 +134,7 @@ namespace loja_carro.Model
             catch (Exception err)
             {
                 throw new Exception("Erro: Problemas ao realizar " +
-                    "leitura de imóveis no banco.\n" + err.Message);
+                    "leitura de corretores no banco.\n" + err.Message);
             }
             finally
             {
@@ -150,9 +143,9 @@ namespace loja_carro.Model
 
             return brokers;
         }
+
         public bool ValidateLogin(Broker broker)
         {
-
             Command.Connection = Connect.ReturnConnection();
             Command.CommandText = "SELECT * FROM Broker WHERE " +
                                   "BrokerCode = @brokerCode AND " +

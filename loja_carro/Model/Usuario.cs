@@ -1,33 +1,24 @@
-﻿using loja_carro.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace loja_carro.Model
 {
-    
     internal class Usuario
     {
         public int Codusuario { get; set; }
         public string Usuarionome { get; set; }
         public string Senha { get; set; }
-        
-        public Usuario( int codusuario , string usuario, string senha)
+
+        public Usuario(int codusuario, string usuarionome, string senha)
         {
             Codusuario = codusuario;
-           
-
+            Usuarionome = usuarionome;
+            Senha = senha;
         }
-    
 
-      public Usuario(string usuario, string senha)
-{
-    Codusuario = Codusuario;
-    Usuarionome = usuario;
-    Senha = senha;
-
-}
+        public Usuario(string usuarionome, string senha)
+        {
+            Usuarionome = usuarionome;
+            Senha = senha;
+        }
     }
-}       
+}
