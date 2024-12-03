@@ -63,6 +63,16 @@ namespace loja_carro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1__2_ {
+            get {
+                object obj = ResourceManager.GetObject("1 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cadiado__1_ {
             get {
                 object obj = ResourceManager.GetObject("cadiado (1)", resourceCulture);

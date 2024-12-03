@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Data.SqlClient;
 
 namespace loja_carro.Model
 {
@@ -13,16 +13,9 @@ namespace loja_carro.Model
         public string Email { get; private set; }
         public string Password { get; private set; }
 
-        public Broker(string brokerCode, string password)
-        {
-            BrokerCode = brokerCode;
-            Password = password;
-        }
-
-        public Broker(int id, string brokerName, string brokerCode,
-            string state, int codeArea, string telephone, string email,
-            string password) : this(brokerName, brokerCode, state, codeArea,
-            telephone, email, password)
+        // Construtor único
+        public Broker(string brokerName, int id, string brokerCode, string state,
+                      int codeArea, string telephone, string email, string password)
         {
             Id = id;
             BrokerName = brokerName;

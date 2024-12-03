@@ -20,7 +20,7 @@ namespace loja_carro.Resources.Model
         public void Insert(Usuario prop)
         {
             Command.Connection = connect.ReturnConnection();
-            Command.CommandText = @"INSERT INTO USUARIO VALUES (@USUARIO, @SENHA)";
+            Command.CommandText = @"INSERT INTO Usuario(Usuarionome, Senha) VALUES (@USUARIO, @SENHA)";
             Command.Parameters.AddWithValue("@USUARIO", prop.Usuarionome);
             Command.Parameters.AddWithValue("@SENHA", prop.Senha);
 
@@ -30,7 +30,8 @@ namespace loja_carro.Resources.Model
             }
             catch (Exception err)
             {
-                throw new Exception("Erro: Problema ao inserir usuário no banco.\n" + err.Message);
+                //throw new Exception("Erro: Problema ao inserir usuário no banco.\n" + err.Message);
+                throw err;
             }
             finally
             {
@@ -117,8 +118,7 @@ namespace loja_carro.Resources.Model
 
 
 
-using System;
-
+/*
 namespace loja_carro.Model
 {
     internal class Broker
@@ -134,7 +134,7 @@ namespace loja_carro.Model
 
         public Broker(string brokerCode, string password)
         {
-            BrokerCode = brokerCode;
+            this.BrokerCode = brokerCode;
             Password = password;
         }
 
@@ -159,3 +159,4 @@ namespace loja_carro.Model
         }
     }
 }
+*/

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using loja_carro.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -100,7 +101,10 @@ namespace loja_carro
         private void txbcar2_Click(object sender, EventArgs e)
         {
 
+            var txbcar_click = new preço();
+            txbcar2_Click.ShowDialog();
         }
+    }
 
         private void button2_Click(object sender, EventArgs e)
         {

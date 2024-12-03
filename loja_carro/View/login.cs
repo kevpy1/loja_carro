@@ -95,10 +95,10 @@ namespace loja_carro.View
 
             UsuarioDAO usuarioDAO = new UsuarioDAO();
 
-            usuarioDAO.insert(usuario);
+            usuarioDAO.Insert(usuario);
             
             txbusuario.Clear();
-            txbusuario.Clear();
+            txbsenha.Clear();
 
             MessageBox.Show("Usuario cadastrado ");
         }
@@ -106,6 +106,12 @@ namespace loja_carro.View
         private void login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            var formLoja = new FormGerenciarUsuarios();
+            formLoja.ShowDialog();
         }
     }
 }

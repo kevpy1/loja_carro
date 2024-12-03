@@ -388,7 +388,7 @@ namespace loja_carro
             // txbcar4
             // 
             this.txbcar4.Image = global::loja_carro.Properties.Resources.carro_4;
-            this.txbcar4.Location = new System.Drawing.Point(688, 417);
+            this.txbcar4.Location = new System.Drawing.Point(749, 417);
             this.txbcar4.Name = "txbcar4";
             this.txbcar4.Size = new System.Drawing.Size(223, 185);
             this.txbcar4.TabIndex = 58;
@@ -397,7 +397,7 @@ namespace loja_carro
             // txbar1
             // 
             this.txbar1.Image = global::loja_carro.Properties.Resources.carro_2;
-            this.txbar1.Location = new System.Drawing.Point(359, 417);
+            this.txbar1.Location = new System.Drawing.Point(376, 417);
             this.txbar1.Name = "txbar1";
             this.txbar1.Size = new System.Drawing.Size(223, 185);
             this.txbar1.TabIndex = 57;
@@ -406,7 +406,7 @@ namespace loja_carro
             // txbcar3
             // 
             this.txbcar3.Image = global::loja_carro.Properties.Resources.carro_3;
-            this.txbcar3.Location = new System.Drawing.Point(688, 210);
+            this.txbcar3.Location = new System.Drawing.Point(749, 216);
             this.txbcar3.Name = "txbcar3";
             this.txbcar3.Size = new System.Drawing.Size(223, 185);
             this.txbcar3.TabIndex = 56;
@@ -415,7 +415,7 @@ namespace loja_carro
             // txbcar2
             // 
             this.txbcar2.Image = global::loja_carro.Properties.Resources.carro_1__2_;
-            this.txbcar2.Location = new System.Drawing.Point(359, 210);
+            this.txbcar2.Location = new System.Drawing.Point(376, 210);
             this.txbcar2.Name = "txbcar2";
             this.txbcar2.Size = new System.Drawing.Size(223, 185);
             this.txbcar2.TabIndex = 55;

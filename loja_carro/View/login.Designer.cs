@@ -41,6 +41,7 @@
             this.senha = new System.Windows.Forms.Label();
             this.usuario = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,7 +135,7 @@
             this.txbusuario.Location = new System.Drawing.Point(157, 80);
             this.txbusuario.Name = "txbusuario";
             this.txbusuario.Size = new System.Drawing.Size(100, 20);
-            this.txbusuario.TabIndex = 6;
+            this.txbusuario.TabIndex = 0;
             this.txbusuario.TextChanged += new System.EventHandler(this.texsenha1_TextChanged);
             // 
             // txbsenha
@@ -142,7 +143,7 @@
             this.txbsenha.Location = new System.Drawing.Point(157, 189);
             this.txbsenha.Name = "txbsenha";
             this.txbsenha.Size = new System.Drawing.Size(116, 20);
-            this.txbsenha.TabIndex = 5;
+            this.txbsenha.TabIndex = 1;
             this.txbsenha.TextChanged += new System.EventHandler(this.textSenh_TextChanged);
             // 
             // senha
@@ -167,11 +168,22 @@
             this.usuario.Text = "Usuario";
             this.usuario.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(569, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.user);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button txtcriarlog;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button2;
     }
 }

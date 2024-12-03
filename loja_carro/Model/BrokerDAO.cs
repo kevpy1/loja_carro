@@ -119,8 +119,8 @@ namespace loja_carro.Model
                 while (rd.Read())
                 {
                     Broker broker = new Broker(
-                        (int)rd["Id"],
                         (string)rd["BrokerName"],
+                        (int)rd["Id"],
                         (string)rd["BrokerCode"],
                         (string)rd["State"],
                         (int)rd["CodeArea"],
