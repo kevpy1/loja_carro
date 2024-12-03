@@ -3,10 +3,6 @@ using loja_carro.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace loja_carro.Resources.Model
 {
@@ -19,50 +15,44 @@ namespace loja_carro.Resources.Model
         {
             connect = new Connection();
             Command = new SqlCommand();
-
         }
-        public void insert(Usuario prop)
+
+        public void Insert(Usuario prop)
         {
             Command.Connection = connect.ReturnConnection();
-            Command.CommandText = @"INSERT INTO USUARIO VALUES 
-         (@USUARIO, @SENHA)";
-
+            Command.CommandText = @"INSERT INTO USUARIO VALUES (@USUARIO, @SENHA)";
             Command.Parameters.AddWithValue("@USUARIO", prop.Usuarionome);
             Command.Parameters.AddWithValue("@SENHA", prop.Senha);
 
-
             try
-
             {
                 Command.ExecuteNonQuery();
             }
-
             catch (Exception err)
             {
-                throw new Exception("erro: Problema ao" + "insirir carro no banco.\n" + err.Message);
+                throw new Exception("Erro: Problema ao inserir usuário no banco.\n" + err.Message);
             }
             finally
             {
                 connect.CloseConnection();
             }
         }
-       
 
         public void Atualizar(Usuario usuarioAtualizado)
         {
             Command.Connection = connect.ReturnConnection();
-            Command.CommandText = @"UPDATE USUARIO SET Usuario = @usuario, Senha = @senha, WHERE codusuario= @codusuario";
-         
+            Command.CommandText = @"UPDATE USUARIO SET Usuarionome = @usuario, Senha = @senha WHERE Codusuario = @codusuario";
             Command.Parameters.AddWithValue("@usuario", usuarioAtualizado.Usuarionome);
             Command.Parameters.AddWithValue("@codusuario", usuarioAtualizado.Codusuario);
             Command.Parameters.AddWithValue("@senha", usuarioAtualizado.Senha);
+
             try
             {
                 Command.ExecuteNonQuery();
             }
             catch (Exception err)
             {
-                throw new Exception("Erro: Problemas ao realizar atualização de usuário no banco.\n" + err.Message);
+                throw new Exception("Erro: Problema ao atualizar usuário no banco.\n" + err.Message);
             }
             finally
             {
@@ -73,54 +63,99 @@ namespace loja_carro.Resources.Model
         public void Excluir(int codusuario)
         {
             Command.Connection = connect.ReturnConnection();
-            Command.CommandText = @"DELETE FROM Usuario WHERE codusuario = @code";
-            Command.Parameters.AddWithValue("@codusuario", "@code");
+            Command.CommandText = @"DELETE FROM USUARIO WHERE Codusuario = @codusuario";
+            Command.Parameters.AddWithValue("@codusuario", codusuario);
+
             try
             {
                 Command.ExecuteNonQuery();
             }
             catch (Exception err)
             {
-                throw new Exception("Erro: Problemas ao excluir usuário no banco.\n" + err.Message);
+                throw new Exception("Erro: Problema ao excluir usuário no banco.\n" + err.Message);
             }
             finally
             {
                 connect.CloseConnection();
             }
         }
+
         public List<Usuario> ListarTodosUsuarios()
         {
-
             Command.Connection = connect.ReturnConnection();
             Command.CommandText = "SELECT * FROM USUARIO";
 
-            List<Usuario> listaDeUsuarios = new List<Usuario>(); //Instancio a list com o tamanho padrão.
+            List<Usuario> listaDeUsuarios = new List<Usuario>();
+
             try
             {
                 SqlDataReader rd = Command.ExecuteReader();
 
-                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
                 while (rd.Read())
                 {
                     Usuario usuario = new Usuario(
                         (int)rd["Codusuario"],
-                        (string)rd["usuario"], 
-                        (string)rd["senha"]);
-                
-                      
+                        (string)rd["Usuarionome"],
+                        (string)rd["Senha"]);
+
                     listaDeUsuarios.Add(usuario);
                 }
                 rd.Close();
             }
             catch (Exception err)
             {
-                throw new Exception("Erro: Problemas ao realizar leitura de usuários no banco.\n" + err.Message);
+                throw new Exception("Erro: Problema ao ler usuários no banco.\n" + err.Message);
             }
             finally
             {
                 connect.CloseConnection();
             }
             return listaDeUsuarios;
+        }
+    }
+}
+
+
+
+using System;
+
+namespace loja_carro.Model
+{
+    internal class Broker
+    {
+        public int Id { get; set; }
+        public string BrokerName { get; private set; }
+        public string BrokerCode { get; private set; }
+        public string State { get; private set; }
+        public int CodeArea { get; private set; }
+        public string Telephone { get; private set; }
+        public string Email { get; private set; }
+        public string Password { get; private set; }
+
+        public Broker(string brokerCode, string password)
+        {
+            BrokerCode = brokerCode;
+            Password = password;
+        }
+
+        public Broker(int id, string brokerName, string brokerCode,
+            string state, int codeArea, string telephone, string email,
+            string password) : this(brokerName, brokerCode, state, codeArea,
+            telephone, email, password)
+        {
+            Id = id;
+        }
+
+        public Broker(string brokerName, string brokerCode,
+            string state, int codeArea, string telephone, string email, string password)
+        {
+            BrokerName = brokerName;
+            BrokerCode = brokerCode;
+            State = state;
+            CodeArea = codeArea;
+            Telephone = telephone;
+            Email = email;
+            Password = password;
         }
     }
 }

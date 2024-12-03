@@ -1,4 +1,6 @@
-﻿namespace loja_carro
+﻿using System.Windows.Forms;
+
+namespace loja_carro
 {
     partial class Form1
     {
@@ -20,7 +22,6 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
 
         /// <summary>
         /// Método necessário para suporte ao Designer - não modifique 
@@ -54,21 +55,14 @@
             this.btnfiltrar = new System.Windows.Forms.Button();
             this.cmbmarcaescolha = new System.Windows.Forms.ComboBox();
             this.cbxMarca = new System.Windows.Forms.Label();
+            this.txbObjetivo = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.txbcar4 = new System.Windows.Forms.PictureBox();
             this.txbar1 = new System.Windows.Forms.PictureBox();
             this.txbcar3 = new System.Windows.Forms.PictureBox();
             this.txbcar2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txbObjetivo = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Modelo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.objetivo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.categoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.localização = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.marca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.txbcar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbcar3)).BeginInit();
@@ -367,6 +361,30 @@
             this.cbxMarca.Text = "marca";
             this.cbxMarca.Click += new System.EventHandler(this.label1_Click);
             // 
+            // txbObjetivo
+            // 
+            this.txbObjetivo.AutoSize = true;
+            this.txbObjetivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbObjetivo.Location = new System.Drawing.Point(551, 20);
+            this.txbObjetivo.Name = "txbObjetivo";
+            this.txbObjetivo.Size = new System.Drawing.Size(71, 20);
+            this.txbObjetivo.TabIndex = 62;
+            this.txbObjetivo.Text = "objetivo";
+            this.txbObjetivo.Click += new System.EventHandler(this.txbObjetivo_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Compra",
+            "Venda"});
+            this.comboBox2.Location = new System.Drawing.Point(535, 56);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(102, 24);
+            this.comboBox2.TabIndex = 63;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // txbcar4
             // 
             this.txbcar4.Image = global::loja_carro.Properties.Resources.carro_4;
@@ -424,74 +442,11 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // txbObjetivo
-            // 
-            this.txbObjetivo.AutoSize = true;
-            this.txbObjetivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbObjetivo.Location = new System.Drawing.Point(551, 20);
-            this.txbObjetivo.Name = "txbObjetivo";
-            this.txbObjetivo.Size = new System.Drawing.Size(71, 20);
-            this.txbObjetivo.TabIndex = 62;
-            this.txbObjetivo.Text = "objetivo";
-            this.txbObjetivo.Click += new System.EventHandler(this.txbObjetivo_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Compra",
-            "Venda"});
-            this.comboBox2.Location = new System.Drawing.Point(535, 56);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(102, 24);
-            this.comboBox2.TabIndex = 63;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.objetivo,
-            this.marca,
-            this.categoria,
-            this.Modelo,
-            this.localização});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(917, 294);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(528, 97);
-            this.listView1.TabIndex = 64;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            // 
-            // Modelo
-            // 
-            this.Modelo.DisplayIndex = 1;
-            this.Modelo.Text = "Modelo";
-            // 
-            // objetivo
-            // 
-            this.objetivo.DisplayIndex = 2;
-            // 
-            // localização
-            // 
-            this.localização.DisplayIndex = 4;
-            // 
-            // marca
-            // 
-            this.marca.DisplayIndex = 5;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 735);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1316, 735);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.txbObjetivo);
             this.Controls.Add(this.cmbmarcaescolha);
@@ -540,7 +495,7 @@
 
         }
 
-        #endregion
+        
 
         private System.Windows.Forms.Label txbcatec;
         private System.Windows.Forms.Label label6;
@@ -576,13 +531,11 @@
         private System.Windows.Forms.Label cbxMarca;
         private System.Windows.Forms.Label txbObjetivo;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader Modelo;
-        private System.Windows.Forms.ColumnHeader objetivo;
-        private System.Windows.Forms.ColumnHeader marca;
-        private System.Windows.Forms.ColumnHeader categoria;
-        private System.Windows.Forms.ColumnHeader localização;
+
+        public Form1(ComboBox comboBox2)
+        {
+            this.comboBox2 = comboBox2;
+        }
     }
 }
 

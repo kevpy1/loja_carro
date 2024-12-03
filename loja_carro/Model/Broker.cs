@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace loja_carro.Model
 {
@@ -29,11 +25,6 @@ namespace loja_carro.Model
             telephone, email, password)
         {
             Id = id;
-        }
-
-        public Broker(string brokerName, string brokerCode,
-            string state, int codeArea, string telephone, string email, string password)
-        {
             BrokerName = brokerName;
             BrokerCode = brokerCode;
             State = state;
